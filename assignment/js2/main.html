@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Main</title>
+        <meta charset="utf-8">
+        <script>
+            const person = new customer()
+                {
+                    ID = "101"
+                    FName = "Pradeep"
+                    LName = "Chinchole"
+                    Email = "pradeep.chinchole@mphasis.com"
+                    Phone = "9158652627"
+                    Gender = "Male"
+                    dob = "07/31/1982"
+                    Address = "Warje Malwadi"
+                    City = "Pune"
+                    State = "Maharashtra"
+                    country = "India"
+                }
+
+                function showDetails() {
+                    const entries = customer.entries(person);
+                    console.log(entries);
+                    document.getElementById("demo").innerHTML = entries;
+                }
+        </script>
+    </head>
+    <body>
+        <div>
+            <font size="4" id="demo"></font>
+        </div>
+        
+    </body>
+</html>

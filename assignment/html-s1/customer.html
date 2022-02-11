@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<!----Bootstrap for header naver--->
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Customer Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!----Style for navbar below the header navbar using anchor tag--->
+    <style>
+        .nav1 {
+            color: black;
+            padding-left: 100px;
+        }
+
+        .nav1 .search-container {
+            float: right;
+        }
+
+        .nav1 input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .nav1 .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav1 .search-container button:hover {
+            background: #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav .search-container {
+                float: none;
+            }
+
+            .nav1 a,
+            .topnav input[type=text],
+            .topnav .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .nav1 input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+
+
+
+</head>
+</head>
+<!---Header Navbar body--->
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-user-friends"></i> Customer Manager</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="activa"><a href="customer.html">Customers</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+<!---Customer navbar with anchor tag --->
+
+<body>
+    <h1><b>
+            <center>Customers</center>
+        </b></h1><br>
+    <div class="nav1">
+        <a href="card.html"><i class="material-icons" style="font-size:15px">border_all</i> Card View</a> &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/css/"><i class="fa fa-bars"></i> List View</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/js/"><i class='far fa-map'></i> Map View</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="/python/"><i class="fas fa-plus"></i> New Customer</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        <div class="search-container">
+            <label>Filter: </label><br>
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+
+    </div>
+</body>
+
+</html>

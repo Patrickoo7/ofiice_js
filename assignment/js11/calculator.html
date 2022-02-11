@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Mphasisc Calculator Page</title>
+<script>
+        function addition() 
+        {
+            var n1 = document.getElementById("a").value;
+            var n2 = document.getElementById("b").value;
+            result.value = parseInt(n1) + parseInt(n2);
+        }
+
+        function substraction() 
+        {
+            var n1 = document.getElementById("a").value;
+            var n2 = document.getElementById("b").value;
+            result.value = parseInt(n1) - parseInt(n2);
+        }
+
+         function multiplication() 
+         {
+            var n1 = document.getElementById("a").value;
+            var n2 = document.getElementById("b").value;
+            result.value = parseInt(n1) * parseInt(n2);
+        }
+
+        function division() {
+            var n1 = document.getElementById("a").value;
+            var n2 = document.getElementById("b").value;
+            result.value = parseInt(n1) / parseInt(n2);
+        }
+
+</script>
+</head> 
+<body>
+<div>
+<form>
+<table border="5">
+<caption><h3>Calculator Application</h3></caption>
+<tr>
+<td>Number 1</td>
+<td><input type="text" id="a" name="a"/> </td>
+</tr>
+
+<tr>
+<td>Number 2</td>
+<td><input type="text" id="b" name="b"/> </td>
+</tr>
+
+<tr>
+<td>Result</td>
+<td><textarea id="result" rows="5" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<input type="button" value="Addition" onclick="addition()">
+<input type="button" value="Subtracttion" onclick="substraction()">
+<input type="button" value="Multiplication" onclick="multiplication()">
+<input type="button" value="Division" onclick="division()">
+</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
