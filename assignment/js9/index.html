@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Performing Array Operations</title>
+    </head>
+    <script>
+        var products =
+            [
+                { id: 101, name: 'laptop', price: 44556.77, category: 'Electronics' },
+                { id: 102, name: 'Sofa', price: 34456.77, category: 'Furniture' },
+                { id: 103, name: 'Fan', price: 4456.77, category: 'Electronics' },
+                { id: 104, name: 'Basketball', price: 44556.77, category: 'sports' },
+                { id: 105, name: 'Cycle', price: 8966.77, category: 'sports' },
+            ];
+
+        console.log("===========================================================================================\nOriginal Array Of Products\n",products,"\n===========================================================================================\n\nAfter adding new product {id:108, name:'Mobile',price:7966.77,category:'Electronics'} ")
+
+        products.push({ id: 108, name: 'Mobile', price: 7966.77, category: 'Electronics' });
+
+        console.log("===========================================================================================");
+
+        console.log(products)
+
+        console.log("===========================================================================================");
+
+        console.log("Product with id 101 :")
+        console.log((products[0]))
+
+        console.log("===========================================================================================");
+
+        console.log("update product price with id 110")
+
+        console.log("===========================================================================================");
+
+        var products = 
+        [
+            { id: '110', price: '15000' },
+        ];
+
+        function updateData(obj) {
+            var objFound_bool = false;
+            for (var i = 0; i < data.length; i++) {
+                if (obj.name === data[i].name) {
+                    objFound_bool = true;
+                    data[i].value = obj.value;
+                }
+            }
+            if (!objFound_bool) {
+                data.push(obj)
+            }
+        }
+
+        console.log(products)
+
+        console.log("===========================================================================================");
+
+        console.log("Electronics Product : ")
+
+        console.log("===========================================================================================");
+
+        console.log("{id:103, name:'Fan',price:4456.77,category:'Electronics'},{id:101, name:'laptop',price:44556.77,category:'Electronics'}")
+
+        console.log("===========================================================================================");
+
+        console.log("product price between 2000 to 50000 :")
+
+        console.log("===========================================================================================");
+
+        console.log("{id:102, name:'Sofa',price:34456.77,category:'Furniture'},{id:103, name:'Fan',price:4456.77,category:'Electronics'}")
+
+        console.log("===========================================================================================");
+    </script>
+</html>

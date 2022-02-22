@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Create Object using Object Prototype</title>
+    <script>
+        const product =
+        {
+            showdetails: function ()
+            {
+                document.write("==================================================")
+                document.write("<br>creating js object using object prototype")
+                document.write("<br>==================================================")
+                document.write("<br>Product Details")
+                document.write("<br>==================================================")
+                document.write(`<br>Product id : ${this.productid} 
+                                <br>Product name : ${this.name} 
+                                <br> Product price : ${this.price}`);
+                document.write("<br>==================================================")
+
+                console.log("==========================================================\ncreating js object using object prototype\n==========================================================\nProduct Details\n==========================================================", "\n",`Product id : ${this.productid}. `,"\n",`Product name : ${this.name}. `, "\n",`Product price : ${this.price}. `,"\n==========================================================");
+            }
+        };
+
+        const me = Object.create(product)
+        me.productid = '101';
+        me.name = 'Laptop'
+        me.price = '4500'
+
+        me.showdetails();
+    </script>
+
+</html>

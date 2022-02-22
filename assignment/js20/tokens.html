@@ -8,15 +8,21 @@
     {
         var str = document.getElementById("sentence").value;
         words = str.split(" ");
+        var x = "";
+        for(var i = 0; i < words.length; i++)
+        {
+            x += "<li>"+words[i] + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = x;
         console.log(words.join("\n"));
-        document.getElementById("demo").innerHTML = words.join("\n");
     }
 </script>
 </head>
 <body>
 <div align="left">
 <h3>JS Example to convert sentence in to tokens</h3>
-Enter the sentence: <input type="text"  id="sentence" size="50" value="Hello World. How are you doing?"/><br/>
+Enter the sentence: <input type="text"  id="sentence" size="50" value="Hello World! How are you doing?"/><br/>
 <br/>
 <input type="button" value="Split into Tokens" onclick="split()">
 <div>

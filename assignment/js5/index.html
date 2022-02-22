@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Defining Class in JS.</title>
+    <script>
+        class Book 
+        {
+            constructor(sid, name, author, price) 
+            {
+                this.sid = sid;
+                this.name = name;
+                this.author = author;
+                this.price = price;
+            }
+        }
+        
+        const myBook = new Book("13455", "Mrityunjay", "Shivaji Sawant", 4350.55);
+
+        document.write("=========================================================<br>Defining Class in JS<br>=========================================================<br> Book Details<br>=========================================================</p>");
+
+        x = document.write("Book Id: &emsp;&emsp;&nbsp;&nbsp;&nbsp;" + myBook.sid + "<br>Book Name: &emsp;" + myBook.name + "<br>Book Author &emsp;" + myBook.author + "<br>Book Price: &nbsp;&emsp;&nbsp;" + myBook.price);
+
+        document.write("<br>=========================================================");
+
+        console.log("=========================================================", "\nBook Details", "\n=========================================================", "\nBook Id:       " + myBook.sid, "\nBook Name:     " + myBook.name, "\nBook Author:   " + myBook.author, "\nBook Price:    " + myBook.price, "\n=========================================================");
+    </script>
+</head>
+</html>

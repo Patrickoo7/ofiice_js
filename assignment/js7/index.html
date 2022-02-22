@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="jai"></p>
+    <script>
+        document.write("=================================================================");
+        document.write("<br>");
+        document.write("Java Script String Operation");
+        document.write("<br>");
+        document.write("=================================================================");
+        document.write("<br>");
+
+        var s1 = "This is a Java Script";
+        var s2 = new String("I like it.");
+        var s3 = "Mphasis";
+        var s4 = "   Welcome";
+
+        document.write("S1 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + s1);
+        document.write("<br>");
+        document.write("S2 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + s2);
+        document.write("<br>");
+        document.write("S3 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + s3);
+        document.write("<br>");
+        document.write("S4 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + s4);
+        document.write("<br>");
+
+        console.log("Java Script String Operation");
+        console.log("S1                       :" + s1);
+        console.log("S2                       :" + s2);
+        console.log("S3                       :" + s3);
+        console.log("S3                       :" + s4);
+
+        let t = s1.length;
+        let result = s1.concat(s2);
+        let u = s1.toUpperCase();
+        let v = s1.toLowerCase();
+        let w = s1.indexOf("a");
+        let x = s3.indexOf("a");
+        let y = s1.charAt(10);
+        let z = s2.substring(0, 7);
+        let aa = s3.substring(0);
+        let ab = s1.substr(10, 11);
+        let ac = s4.length;
+        let ad = s4.trim();
+        let ae = ad.length;
+        let af = s1 == s2;
+        let ag = s1 == s1;
+        let ah = s1.localeCompare(s2);
+        let ai = s1.localeCompare(s1);
+
+
+
+
+    </script>
+
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <p id="e"></p>
+    <p id="f"></p>
+    <p id="g"></p>
+    <p id="h"></p>
+    <p id="i"></p>
+    <p id="j"></p>
+    <p id="k"></p>
+    <p id="l"></p>
+    <p id="m"></p>
+    <p id="n"></p>
+    <p id="o"></p>
+    <p id="q"></p>
+    <p id="r"></p>
+    <p id="s"></p>
+
+    <script>
+
+        document.getElementById("a").innerHTML = "Length of s1 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + t;
+        document.getElementById("b").innerHTML = "S1 Concat S2 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + result;
+        document.getElementById("c").innerHTML = "S1 at S2 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + s1 + " " + "at" + " " + s3;
+        document.getElementById("d").innerHTML = "S1 in upper case : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + u;
+        document.getElementById("e").innerHTML = "S1 in upper case : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + v;
+        document.getElementById("f").innerHTML = "S1 indexOf : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + w;
+        document.getElementById("g").innerHTML = "S3 indexOf : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + x;
+        document.getElementById("h").innerHTML = "S1 charAt : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + y;
+        document.getElementById("i").innerHTML = "S2 substring(0,7) : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + z;
+        document.getElementById("j").innerHTML = "S3 substring(0) : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + aa;
+        document.getElementById("k").innerHTML = "Z + AA : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + z + " " + aa;
+        document.getElementById("l").innerHTML = "S1 substr(10,11) : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + ab;
+        document.getElementById("m").innerHTML = "Before Trim S4 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + ac;
+        document.getElementById("n").innerHTML = "After Trim S4 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + ae;
+        document.getElementById("o").innerHTML = "S1 == S2 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + af;
+        document.getElementById("q").innerHTML = "S1 == S1 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + ag;
+        document.getElementById("r").innerHTML = "S1 localecompare(S2) : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + ah;
+        document.getElementById("s").innerHTML = "S1 localecompare(S2) : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + " " + ai;
+
+        console.log("Length of s1             :" + t);
+        console.log("S1 Concat S2             :" + result);
+        console.log("S1 at S2                 :" + " " + s1 + " " + "at" + " " + s3);
+        console.log("S1 in upper case         :" + u);
+        console.log("S1 in upper case         :" + v);
+        console.log("S1 indexOf               :" + w);
+        console.log("S3 indexOf               :" + x);
+        console.log("S1 charAt                :" + y);
+        console.log("S2 substring(0,7)        :" + z);
+        console.log("S3 substring(0)          :" + aa);
+        console.log("Z + AA                   :" + " " + z + " " + aa);
+        console.log("S1 substr(10,11)         :" + ab);
+        console.log("Before Trim S4           :" + ac);
+        console.log("After Trim S4            :" + ae);
+        console.log("S1 == S2                 :" + af);
+        console.log("S1 == S1                 :" + ag);
+        console.log("S1 localecompare(S2)     :" + ah);
+        console.log("S1 localecompare(S1)     :" + ai);
+
+
+        document.write("<br>");
+        document.write("=================================================================");
+        document.write("<br>");
+
+
+
+
+
+    </script>
+</body>
+
+</html>

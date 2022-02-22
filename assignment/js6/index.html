@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Deleting Object Property</title>
+    <script>
+        var person = 
+        {
+            rollnumber: 101,
+            name: "Mahesh Patil",
+            marks: 45.88,
+            gender: "Male"
+        };
+        
+        document.write("=================================================================<br>Before Deleting Roll Number Student Details<br>=================================================================<br>Roll Number: "+person.rollnumber+("<br>Name:"+person.name+"<br>Marks:"+person.marks+"<br>Gender:" + person.gender));
+
+
+        console.log("=================================================================\nBefore Deleting Roll Number Student Details\n=================================================================\nRoll Number       :"+person.rollnumber+"\nName              :" + person.name+"\nMarks             :" + person.marks+"\nGender            :" + person.gender+"\n=================================================================");
+
+        delete person.rollnumber;
+
+        document.write("<br>=================================================================<br>After Deleting Roll Number Student Details<br>=================================================================<br>Roll Number: "+person.rollnumber+"<br>Name:" + person.name+"<br>Marks:" + person.marks+"<br>Gender:" + person.gender+"<br>");
+
+
+        console.log("After Deleting Roll Number Student Details\nRoll Number       :" + person.rollnumber+"\nName              :" + person.name+"\nMarks             :" + person.marks+"\nGender            :" + person.gender);
+
+        document.write("=================================================================<br>");
+    
+        document.getElementById("Mahesh").innerHTML = "Student" + " " + person.rollnumber + " " + "has gained" + " " + person.marks;
+    </script>
+</head>
+<body>
+    <p id="Mahesh"></p>
+</body>
+</html>

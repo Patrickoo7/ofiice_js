@@ -1,34 +1,60 @@
 <html>
     <head>
-        <title>Main</title>
+        <title>Create Object using Object Constructor</title>
         <meta charset="utf-8">
         <script>
-            const person = new customer()
+            function person(id, FName, LName, Email, Phone, Gender, dob, Address, City, State, Country)
                 {
-                    ID = "101"
-                    FName = "Pradeep"
-                    LName = "Chinchole"
-                    Email = "pradeep.chinchole@mphasis.com"
-                    Phone = "9158652627"
-                    Gender = "Male"
-                    dob = "07/31/1982"
-                    Address = "Warje Malwadi"
-                    City = "Pune"
-                    State = "Maharashtra"
-                    country = "India"
+                    this.id = id;
+                    this.FName = FName;
+                    this.LName = LName;
+                    this.Email = Email;
+                    this.Phone = Phone;
+                    this.Gender = Gender;
+                    this.dob = dob;
+                    this.Address = Address;
+                    this.City = City;
+                    this.State = State;
+                    this.Country = Country;
+
                 }
 
-                function showDetails() {
-                    const entries = customer.entries(person);
-                    console.log(entries);
-                    document.getElementById("demo").innerHTML = entries;
+                const mydata = new person(101, "Pradeep", "Chinchole", "pradeep.chinchole@mphasis.com", "9158652627", "Male", "07/31/1982", "Warje Malwadi", "Pune", "Maharashtra", "India")
+
+                function showDetails()
+                {
+                    document.write("===============================================================<br>");
+                    document.write("Creating JS Object using Object Constructor<br>");
+                    document.write("===============================================================<br>");
+                    document.write("Customer Details<br>");
+                    document.write("===============================================================<br>");
+                    document.write("Customer ID: &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" +mydata.id+
+                    "<br>Customer First Name is: &emsp;&emsp;&emsp;&emsp;"+mydata.FName+
+                    "<br>Customer Last Name is: &emsp;&emsp;&emsp;&emsp;" +mydata.LName+
+                    "<br>Customer Email: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"+mydata.Email+
+                    "<br>Customer Mobile: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;"+mydata.Phone+
+                    "<br>Customer Gender: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;"+mydata.Gender+
+                    "<br>Customer Date of Birth: &emsp;&emsp;&emsp;&emsp;"+mydata.dob+
+                    "<br>Customer Address: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;" + mydata.Address+
+                    "<br>Customer City: &emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;"+mydata.City+
+                    "<br>Customer State: &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;"+mydata.State+
+                    "<br>Customer Country: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"+mydata.Country);
+                    document.write("<br>===============================================================");
+
+                    console.log("===============================================================","\nCreating JS Object using Object Constructor","\n===============================================================","\nCustomer Details","\n===============================================================","\nCustomer ID:                "+mydata.id+
+                                "\nCustomer First Name is:     "+mydata.FName+
+                                "\nCustomer Last Name is:      "+mydata.LName+
+                                "\nCustomer Email:             "+mydata.Email+
+                                "\nCustomer Mobile:            "+mydata.Phone+
+                                "\nCustomer Gender:            "+mydata.Gender+
+                                "\n>Customer Date of Birth:    "+mydata.dob+
+                                "\nCustomer Address:           "+mydata.Address+
+                                "\nCustomer City:              "+mydata.City+
+                                "\nCustomer State:             "+mydata.State+
+                                "\nCustomer Country:           "+mydata.Country
+                                ,"\n===============================================================");
                 }
+                showDetails();
         </script>
     </head>
-    <body>
-        <div>
-            <font size="4" id="demo"></font>
-        </div>
-        
-    </body>
 </html>
