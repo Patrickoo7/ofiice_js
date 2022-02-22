@@ -1,72 +1,122 @@
 <html>
-    <head>
-        <title>Performing Array Operations</title>
-    </head>
+
+<body>
+    <h3>OutPut </h3>
+    <p>================================================================</p>
+    <p>Orginal products</p>
+    <p>================================================================</p>
+    <p id="p5"></p>
+    <p>================================================================</p>
+    <p>After adding</p>
+    <p>================================================================</p>
+    <p id="p6"></p>
+    <p>================================================================</p>
+    <p id="p2"></p>
+    <p>================================================================</p>
+    <p>After updating</p>
+    <p id="p1"></p>
+    <p>================================================================</p>
+    <p>getting by id</p>
+    <p id="p3"></p>
+    <p>================================================================</p>
+    <p>Electronic products</p>
+    <p>================================================================</p>
+    <p id="p9"></p>
+    <p>================================================================</p>
+    <p>products between 3000 to 30000</p>
+    <p>================================================================</p>
+    <p id="p10"></p>
+    
     <script>
-        var products =
-            [
-                { id: 101, name: 'laptop', price: 44556.77, category: 'Electronics' },
-                { id: 102, name: 'Sofa', price: 34456.77, category: 'Furniture' },
-                { id: 103, name: 'Fan', price: 4456.77, category: 'Electronics' },
-                { id: 104, name: 'Basketball', price: 44556.77, category: 'sports' },
-                { id: 105, name: 'Cycle', price: 8966.77, category: 'sports' },
-            ];
+        var cont = "";
+        var aft = "";
+        var delt = "";
+        var products = 
+        [
+            { id: 101, name: 'laptop', price: 44556.77, category: 'Electronics' },
+            { id: 102, name: 'Sofa', price: 34456.77, category: 'Furniture' },
+            { id: 103, name: 'Fan', price: 4456.77, category: 'Electronics' },
+            { id: 104, name: 'Basketball', price: 44556.77, category: 'sports' },
+            { id: 110, name: 'Cycle', price: 8966.77, category: 'sports' },
+        ];
 
-        console.log("===========================================================================================\nOriginal Array Of Products\n",products,"\n===========================================================================================\n\nAfter adding new product {id:108, name:'Mobile',price:7966.77,category:'Electronics'} ")
+        for (i = 0; i < products.length; i++) 
+        {
+            cont += "{" + "id" + ":" + products[i].id + "," + "name" + ":" + products[i].name + "," + "price" + ":" + products[i].price + "," + "category" + ":" + products[i].category + "}" + "<br>";
+        }
 
-        products.push({ id: 108, name: 'Mobile', price: 7966.77, category: 'Electronics' });
+        console.log("Original Array Of Products")
+        console.log(products)
 
-        console.log("===========================================================================================");
+        document.getElementById("p5").innerHTML = cont;
+
+        console.log("After adding new product {id:108, name:'Mobile',price:7966.77,category:'Electronics'} ")
+
+        document.getElementById("p2").innerHTML = "no products after adding" + ":" + products.push({ id: 108, name: 'Mobile', price: 7966.77, category: 'Electronics' });
+
+        for (i = 0; i < products.length; i++) 
+        {
+            aft += "{" + "id" + ":" + products[i].id + "," + "name" + ":" + products[i].name + "," + "price" + ":" + products[i].price + "," + "category" + ":" + products[i].category + "}" + "<br>";
+        }
+
+        document.getElementById("p6").innerHTML = aft;
 
         console.log(products)
 
-        console.log("===========================================================================================");
+        objIndex = products.findIndex((obj => obj.id == 110));
+
+        products[objIndex].price = "15000"
+        document.getElementById("p1").innerHTML = "{" + "id" + ":" + products[4].id + "," + "name" + ":" + products[4].name + "," + "price" + ":" + products[4].price + "," + "category" + ":" + products[4].category + "}";
+
+        objIndex1 = products.find((obj => obj.id == 101));
+        document.getElementById("p3").innerHTML = "{" + "id" + ":" + objIndex1.id + "," + "name" + ":" + objIndex1.name + "," + "price" + ":" + objIndex1.price + "," + "category" + ":" + objIndex1.category + "}";
+
 
         console.log("Product with id 101 :")
         console.log((products[0]))
 
-        console.log("===========================================================================================");
+        delete products[3];
 
-        console.log("update product price with id 110")
-
-        console.log("===========================================================================================");
-
-        var products = 
-        [
-            { id: '110', price: '15000' },
-        ];
-
-        function updateData(obj) {
-            var objFound_bool = false;
-            for (var i = 0; i < data.length; i++) {
-                if (obj.name === data[i].name) {
-                    objFound_bool = true;
-                    data[i].value = obj.value;
-                }
-            }
-            if (!objFound_bool) {
-                data.push(obj)
-            }
-        }
+        console.log("After deleating")
 
         console.log(products)
 
-        console.log("===========================================================================================");
+        function groupArrayOfObjects(list, key) 
+        {
+            return list.reduce(function (rv, x) 
+            {
+                (rv[x[key]] = rv[x[key]] || []).push(x);
+                return rv;
+            }, {});
+        };
 
+
+        var groupedPeople = groupArrayOfObjects(products, "category");
+        var m = groupedPeople.Electronics;
+        var n = "";
+        for (i = 0; i < m.length; i++) 
+        {
+            n += "{" + "id" + ":" + m[i].id + "," + "name" + ":" + m[i].name + "," + "price" + ":" + m[i].price + "," + "category" + ":" + m[i].category + "}" + "<br>";
+        }
+
+        document.getElementById("p9").innerHTML = n;
         console.log("Electronics Product : ")
+        console.log(groupedPeople.Electronics);
 
-        console.log("===========================================================================================");
+        var newArray = products.filter(function (el) 
+        {
+            return el.price >= 3000 && el.price <= 30000;
+        });
 
-        console.log("{id:103, name:'Fan',price:4456.77,category:'Electronics'},{id:101, name:'laptop',price:44556.77,category:'Electronics'}")
-
-        console.log("===========================================================================================");
-
-        console.log("product price between 2000 to 50000 :")
-
-        console.log("===========================================================================================");
-
-        console.log("{id:102, name:'Sofa',price:34456.77,category:'Furniture'},{id:103, name:'Fan',price:4456.77,category:'Electronics'}")
-
-        console.log("===========================================================================================");
+        console.log("price");
+        console.log(newArray);
+        var a = "";
+        for (i = 0; i < newArray.length; i++) 
+        {
+            a += "{" + "id" + ":" + newArray[i].id + "," + "name" + ":" + newArray[i].name + "," + "price" + ":" + newArray[i].price + "," + "category" + ":" + newArray[i].category + "}" + "<br>";
+        }
+        
+        document.getElementById("p10").innerHTML = a;
     </script>
+</body>
 </html>
